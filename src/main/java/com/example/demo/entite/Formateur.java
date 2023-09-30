@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.List;
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -14,8 +15,7 @@ import javax.persistence.*;
 @Entity
 @Table(name = "formateur")
 public class Formateur extends Utilisateur {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    @OneToMany(cascade = CascadeType.ALL)
+    private List<Formation> formations;
 
 }
