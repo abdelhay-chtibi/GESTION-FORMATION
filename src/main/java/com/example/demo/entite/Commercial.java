@@ -1,20 +1,16 @@
 package com.example.demo.entite;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
+import java.util.List;
 
-@NoArgsConstructor
-@AllArgsConstructor
-@Getter
-@Setter
+@Data
 @Entity
 @Table(name = "commercial")
-public class Commercial {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+public class Commercial extends Utilisateur{
+    @OneToMany (cascade = CascadeType.ALL)
+    private List<Appel> appels;
+
+
 }

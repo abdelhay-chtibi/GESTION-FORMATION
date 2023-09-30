@@ -23,13 +23,13 @@ public class Formation {
     private Float prix;
     private Date date_debut;
     private Date date_fin;
-    @OneToMany(cascade = CascadeType.ALL)
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "formation")
     private List<Cours> cours;
     @OneToMany(cascade = CascadeType.ALL)
     private List<Participant> participants;
 
     // Relation avec Formateur
     @ManyToOne
-    @JoinColumn(name = "formateur_id")
+    @JoinColumn(name = "id_formateur")
     private Formateur formateur;
 }

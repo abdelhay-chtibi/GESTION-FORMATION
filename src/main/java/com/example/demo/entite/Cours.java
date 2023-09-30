@@ -12,5 +12,8 @@ public class Cours {
     @GeneratedValue( strategy = GenerationType.IDENTITY)
     private int id;
     private String nom;
+    @ManyToOne
+    @JoinColumn(name = "id_formation")
+    private Formation formation;
 
 }
