@@ -25,6 +25,8 @@ public class Formation {
     private Date date_fin;
     @OneToMany(cascade = CascadeType.ALL)
     private List<Cours> cours;
+    @OneToMany(cascade = CascadeType.ALL)
+    private List<Participant> participants;
 
     // Relation avec Formateur
     @ManyToOne

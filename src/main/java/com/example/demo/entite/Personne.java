@@ -1,4 +1,5 @@
 package com.example.demo.entite;
+import com.example.demo.enums.Sexe;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.Getter;
@@ -16,6 +17,8 @@ public class Personne {
     private String nom;
     private String prenom;
     private Date date_naissance;
+    @Enumerated(EnumType.STRING)
+    private Sexe sexe;
 
 
 
