@@ -23,7 +23,7 @@ public class Formation {
     private Float prix;
     private Date date_debut;
     private Date date_fin;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "formation")
+    @OneToMany(cascade = CascadeType.ALL)
     private List<Cours> cours;
     @OneToMany(cascade = CascadeType.ALL)
     private List<Participant> participants;
