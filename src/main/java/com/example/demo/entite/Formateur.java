@@ -7,14 +7,15 @@ import lombok.Setter;
 
 import javax.persistence.*;
 
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 @Getter
 @Setter
 @Entity
-@Table( name = "utilisateur")
-public class Utilisateur extends Personne {
+@Table(name = "formateur")
+public class Formateur extends Utilisateur{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+
 }
