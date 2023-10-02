@@ -5,7 +5,10 @@ import lombok.*;
 import javax.persistence.*;
 import java.util.List;
 
-@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Getter
+@Setter
 @Entity
 @Table(name = "formateur")
 public class Formateur extends Utilisateur {

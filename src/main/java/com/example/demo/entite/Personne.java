@@ -1,9 +1,6 @@
 package com.example.demo.entite;
 import com.example.demo.enums.Sexe;
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
 import java.util.Date;
 
 import javax.persistence.*;
@@ -13,7 +10,7 @@ import javax.persistence.*;
 public class Personne {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private int id;
     private String nom;
     private String prenom;
     private Date date_naissance;
