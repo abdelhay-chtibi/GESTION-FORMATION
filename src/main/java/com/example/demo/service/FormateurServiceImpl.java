@@ -45,4 +45,6 @@ public class FormateurServiceImpl implements FormateurService{
         this.formateurRepository.deleteById(id);
         return "Formateur supprimé";
     }
+
+    
 }

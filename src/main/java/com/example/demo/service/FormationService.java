@@ -9,4 +9,5 @@ public interface FormationService {
     List<Formation> Lire();
     Formation modifier(int id, Formation formation);
     String supprimer(int id);
+    public boolean affecterFormateur(int formationId, int formateurId);
 }
