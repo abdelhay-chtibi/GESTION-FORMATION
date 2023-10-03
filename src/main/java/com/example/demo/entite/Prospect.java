@@ -1,7 +1,6 @@
 package com.example.demo.entite;
 
 import lombok.Data;
-
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;

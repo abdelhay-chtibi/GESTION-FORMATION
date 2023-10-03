@@ -2,7 +2,6 @@ package com.example.demo.entite;
 import com.example.demo.enums.Sexe;
 import lombok.Data;
 import java.util.Date;
-
 import javax.persistence.*;
 @Data
 @Entity
