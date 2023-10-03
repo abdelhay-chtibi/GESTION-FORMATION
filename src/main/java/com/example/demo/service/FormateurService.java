@@ -10,6 +10,6 @@ public interface FormateurService {
     List<Formateur> Lire();
 
     Formateur modifier(int id, Formateur formateur);
-    
+
     String supprimer(int id);
 }

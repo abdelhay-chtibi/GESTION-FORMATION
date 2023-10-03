@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface FormationService {
     Formation creer(Formation formation);
-    List<Formation> Lire();
+    List<Formation> rechercher(String nom);
     Formation modifier(int id, Formation formation);
     String supprimer(int id);
     public boolean affecterFormateur(int formationId, int formateurId);

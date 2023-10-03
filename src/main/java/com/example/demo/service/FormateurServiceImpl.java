@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class FormateurServiceImpl implements FormateurService{
+public class FormateurServiceImpl implements FormateurService {
     private final FormateurRepository formateurRepository;
 
     public FormateurServiceImpl(FormateurRepository formateurRepository) {
@@ -27,7 +27,7 @@ public class FormateurServiceImpl implements FormateurService{
     @Override
     public Formateur modifier(int id, Formateur formateur) {
         return formateurRepository.findById(id)
-                .map(f-> {
+                .map(f -> {
                     f.setNom(formateur.getNom());
                     f.setPrenom(formateur.getPrenom());
                     f.setEmail(formateur.getEmail());
@@ -38,13 +38,10 @@ public class FormateurServiceImpl implements FormateurService{
                 }).orElseThrow(() -> new RuntimeException("Formateur non trouvé !"));
     }
 
-
-
     @Override
     public String supprimer(int id) {
         this.formateurRepository.deleteById(id);
         return "Formateur supprimé";
     }
 
-    
 }
